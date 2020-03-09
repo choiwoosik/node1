@@ -1,4 +1,7 @@
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 module.exports = () => {
     var db = mongoose.connection;
@@ -8,7 +11,7 @@ module.exports = () => {
     console.log("Connected to mongod server");
     });
           
-    mongoose.connect('mongodb://localhost/node1_db', {useNewUrlParser: true, useUnifiedTopology: true});
+    mongoose.connect(process.env.DB_SERVER_URI, {useNewUrlParser: true, useUnifiedTopology: true});
     
   require('./models/config.js');
 };

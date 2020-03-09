@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+ <html lang="ko">    
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 로그인 페이지 </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="https://kauth.kakao.com/oauth/authorize?client_id=<%= ClientId %>&redirect_uri=http://ws-nodejstest.run.goorm.io/api/auth/kakao/callback&response_type=code"> 
+      <button>
+          카카오 로그인
+      </button>
+    </a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
